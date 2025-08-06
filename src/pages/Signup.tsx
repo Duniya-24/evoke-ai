@@ -26,7 +26,7 @@ const Signup = () => {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center space-x-2 mb-4">
             <Brain className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold gradient-text">Evotion AI</span>
+            <span className="text-2xl font-bold gradient-text">Mood Metrics</span>
           </Link>
           <p className="text-muted-foreground">Start your journey with emotion intelligence</p>
         </div>
@@ -35,7 +35,7 @@ const Signup = () => {
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl font-bold text-center">Create Account</CardTitle>
             <CardDescription className="text-center">
-              Join thousands of professionals using AI emotion recognition
+              Join thousands of people using AI emotion recognition
             </CardDescription>
           </CardHeader>
           
