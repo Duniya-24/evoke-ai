@@ -25,7 +25,7 @@ const Login = () => {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center space-x-2 mb-4">
             <Brain className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold gradient-text">Evotion AI</span>
+            <span className="text-2xl font-bold gradient-text">Mood Metrics</span>
           </Link>
           <p className="text-muted-foreground">Welcome back to your emotion intelligence platform</p>
         </div>
