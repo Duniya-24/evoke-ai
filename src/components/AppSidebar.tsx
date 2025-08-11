@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Brain, LayoutDashboard, FileText, Mic, Video, MessageSquare, BarChart3, Settings, User, LogOut } from "lucide-react";
+import { BarChart4, LayoutDashboard, FileText, Mic, Video, MessageSquare, BarChart3, Settings, User, LogOut } from "lucide-react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 import {
   Sidebar,
@@ -49,14 +50,17 @@ export function AppSidebar() {
   return (
     <Sidebar className={collapsed ? "w-14" : "w-64"} collapsible="icon">
       <SidebarHeader className="border-b border-sidebar-border p-4">
-        <div className="flex items-center space-x-2">
-          <Brain className="h-8 w-8 text-sidebar-primary flex-shrink-0" />
-          {!collapsed && (
-            <div>
-              <h2 className="text-lg font-bold gradient-text">Evotion AI</h2>
-              <p className="text-xs text-sidebar-foreground/70">Emotion Intelligence</p>
-            </div>
-          )}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <BarChart4 className="h-8 w-8 text-sidebar-primary flex-shrink-0" />
+            {!collapsed && (
+              <div>
+                <h2 className="text-lg font-bold gradient-text">Mood Metrics</h2>
+                <p className="text-xs text-sidebar-foreground/70">Emotion Intelligence</p>
+              </div>
+            )}
+          </div>
+          {!collapsed && <ThemeToggle />}
         </div>
       </SidebarHeader>
 

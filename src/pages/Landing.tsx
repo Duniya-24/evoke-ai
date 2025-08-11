@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { 
-  Brain, 
+  BarChart4, 
   MessageSquare, 
   FileText, 
   Mic, 
@@ -57,7 +57,7 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Brain className="h-8 w-8 text-primary" />
+              <BarChart4 className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold gradient-text">Mood Metrics</span>
             </div>
             
@@ -178,7 +178,7 @@ const Landing = () => {
               Ready to Transform Your Understanding of Emotions?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Join thousands of professionals using Evotion AI to unlock deeper insights 
+              Join thousands of professionals using Mood Metrics to unlock deeper insights 
               into human emotions and sentiment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -202,8 +202,8 @@ const Landing = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Brain className="h-6 w-6 text-primary" />
-                <span className="text-lg font-bold">Evotion AI</span>
+                <BarChart4 className="h-6 w-6 text-primary" />
+                <span className="text-lg font-bold">Mood Metrics</span>
               </div>
               <p className="text-muted-foreground">
                 Advanced emotion recognition platform powered by cutting-edge AI technology.
@@ -239,7 +239,7 @@ const Landing = () => {
           </div>
           
           <div className="border-t border-border/50 mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 Evotion AI. All rights reserved.</p>
+            <p>&copy; 2024 Mood Metrics. All rights reserved.</p>
           </div>
         </div>
       </footer>

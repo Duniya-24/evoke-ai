@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
-import { Brain, Mail, Lock, User, Eye, EyeOff } from "lucide-react";
+import { BarChart4, Mail, Lock, User, Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ const Signup = () => {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center space-x-2 mb-4">
-            <Brain className="h-8 w-8 text-primary" />
+            <BarChart4 className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold gradient-text">Mood Metrics</span>
           </Link>
           <p className="text-muted-foreground">Start your journey with emotion intelligence</p>

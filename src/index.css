@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Evotion AI Design System - Professional Dark Theme
+/* Mood Metrics Design System - Professional Dark & Light Theme
 All colors MUST be HSL. Modern SaaS emotion recognition platform.
 */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --primary: 214 88% 35%;           /* Deep Blue #1e40af */
+    /* Core Brand Colors - Dark Theme */
+    --primary: 200 98% 39%;           /* Cool Blue #0ea5e9 */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 214 88% 50%;     /* Lighter Blue for effects */
+    --primary-glow: 200 98% 50%;     /* Lighter Blue for effects */
     
-    --secondary: 262 83% 58%;         /* Purple #7c3aed */
+    --secondary: 268 83% 58%;         /* Cool Purple #8b5cf6 */
     --secondary-foreground: 0 0% 100%;
     
-    --accent: 198 93% 43%;            /* Cyan #06b6d4 */
+    --accent: 189 94% 43%;            /* Cool Cyan #0891b2 */
     --accent-foreground: 0 0% 100%;
     
     /* Professional Dark Background */
@@ -47,15 +47,15 @@ All colors MUST be HSL. Modern SaaS emotion recognition platform.
     /* Borders and Inputs */
     --border: 220 39% 18%;            /* Subtle borders */
     --input: 220 39% 18%;
-    --ring: 214 88% 50%;              /* Focus rings */
+    --ring: 200 98% 50%;              /* Focus rings */
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 88% 35%), hsl(262 83% 58%));
-    --gradient-hero: linear-gradient(135deg, hsl(214 88% 35%) 0%, hsl(262 83% 58%) 50%, hsl(198 93% 43%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(200 98% 39%), hsl(268 83% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 98% 39%) 0%, hsl(268 83% 58%) 50%, hsl(189 94% 43%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(220 39% 11%) 0%, hsl(220 39% 13%) 100%);
     
     /* Shadows and Effects */
-    --shadow-glow: 0 0 40px hsl(214 88% 50% / 0.3);
+    --shadow-glow: 0 0 40px hsl(200 98% 50% / 0.3);
     --shadow-card: 0 10px 30px -5px hsl(220 39% 5% / 0.5);
     --shadow-elegant: 0 25px 50px -12px hsl(220 39% 5% / 0.7);
     
@@ -68,12 +68,76 @@ All colors MUST be HSL. Modern SaaS emotion recognition platform.
     /* Sidebar Colors */
     --sidebar-background: 220 39% 8%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 214 88% 35%;
+    --sidebar-primary: 200 98% 39%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 39% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 220 39% 18%;
-    --sidebar-ring: 214 88% 50%;
+    --sidebar-ring: 200 98% 50%;
+  }
+
+  /* Light Theme */
+  [data-theme="light"] {
+    /* Core Brand Colors - Light Theme */
+    --primary: 200 98% 39%;           /* Cool Blue #0ea5e9 */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 200 98% 50%;
+    
+    --secondary: 268 83% 58%;         /* Cool Purple #8b5cf6 */
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 189 94% 43%;            /* Cool Cyan #0891b2 */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Light Background */
+    --background: 0 0% 100%;          /* Pure White */
+    --foreground: 222 84% 5%;         /* Dark text */
+    
+    /* Card and Surface Colors */
+    --card: 0 0% 100%;                /* White cards */
+    --card-foreground: 222 84% 5%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
+    
+    /* Interactive Elements */
+    --muted: 210 40% 96%;             /* Very light gray */
+    --muted-foreground: 215 16% 47%;  /* Medium gray text */
+    
+    /* Status Colors remain the same */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders and Inputs */
+    --border: 214 32% 91%;            /* Light borders */
+    --input: 214 32% 91%;
+    --ring: 200 98% 50%;
+    
+    /* Light Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 98% 39%), hsl(268 83% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 98% 39%) 0%, hsl(268 83% 58%) 50%, hsl(189 94% 43%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    
+    /* Light Shadows */
+    --shadow-glow: 0 0 40px hsl(200 98% 50% / 0.15);
+    --shadow-card: 0 10px 30px -5px hsl(0 0% 0% / 0.1);
+    --shadow-elegant: 0 25px 50px -12px hsl(0 0% 0% / 0.15);
+
+    /* Light Sidebar Colors */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 84% 5%;
+    --sidebar-primary: 200 98% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 84% 5%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 200 98% 50%;
   }
 }
 
