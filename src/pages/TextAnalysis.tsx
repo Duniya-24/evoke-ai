@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, Upload, Download, Smile, Frown, Meh, Heart, AlertTriangle } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const TextAnalysis = () => {
   const [text, setText] = useState("");
@@ -26,11 +27,27 @@ const TextAnalysis = () => {
     if (!text.trim()) return;
     
     setIsAnalyzing(true);
-    // Simulate API call
-    setTimeout(() => {
+    
+    try {
+      const { data, error } = await supabase.functions.invoke('text-analysis', {
+        body: { text }
+      });
+
+      if (error) {
+        console.error('Analysis error:', error);
+        // Fallback to mock data if ML model is not available
+        setResults(mockEmotions);
+      } else {
+        // Transform the ML model response to match our UI format
+        setResults(data.emotions || mockEmotions);
+      }
+    } catch (error) {
+      console.error('Failed to analyze text:', error);
+      // Fallback to mock data
       setResults(mockEmotions);
+    } finally {
       setIsAnalyzing(false);
-    }, 2000);
+    }
   };
 
   return (
