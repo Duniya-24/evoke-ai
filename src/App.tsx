@@ -15,6 +15,7 @@ import Chatbot from "./pages/Chatbot";
 import Analytics from "./pages/Analytics";
 import Settings from "./pages/Settings";
 import Profile from "./pages/Profile";
+import UseCases from "./pages/UseCases";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/use-cases" element={<UseCases />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/text-analysis" element={<TextAnalysis />} />
           <Route path="/speech-analysis" element={<SpeechAnalysis />} />

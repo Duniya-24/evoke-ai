@@ -63,7 +63,7 @@ const Landing = () => {
             
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-muted-foreground hover:text-primary smooth-transition">Features</a>
-              <a href="#about" className="text-muted-foreground hover:text-primary smooth-transition">About</a>
+              <Link to="/use-cases" className="text-muted-foreground hover:text-primary smooth-transition">Use Cases</Link>
               <a href="#pricing" className="text-muted-foreground hover:text-primary smooth-transition">Pricing</a>
               <Button variant="outline" asChild className="mr-2">
                 <Link to="/login">Login</Link>
