@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BarChart4, LayoutDashboard, FileText, Mic, Video, MessageSquare, BarChart3, Settings, User, LogOut } from "lucide-react";
+import { BarChart4, LayoutDashboard, FileText, Mic, Video, MessageSquare, BarChart3, History, Settings, User, LogOut } from "lucide-react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -25,6 +25,7 @@ const navigationItems = [
   { title: "Video Analysis", url: "/video-analysis", icon: Video },
   { title: "AI Chatbot", url: "/chatbot", icon: MessageSquare },
   { title: "Analytics", url: "/analytics", icon: BarChart3 },
+  { title: "History", url: "/history", icon: History },
 ];
 
 const settingsItems = [

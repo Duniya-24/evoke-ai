@@ -6,6 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Video, Play, Pause, Upload, Camera, Download } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const VideoAnalysis = () => {
   const [isRecording, setIsRecording] = useState(false);
@@ -73,9 +74,20 @@ const VideoAnalysis = () => {
                     onClick={() => {
                       setIsRecording(!isRecording);
                       if (!isRecording) {
-                        setTimeout(() => {
+                        setTimeout(async () => {
                           setIsRecording(false);
                           setHasVideo(true);
+                          
+                          // Save to history
+                          const { data: { user } } = await supabase.auth.getUser();
+                          if (user) {
+                            await supabase.from('emotion_history').insert({
+                              user_id: user.id,
+                              analysis_type: 'video',
+                              emotions: mockEmotions,
+                              content_preview: 'Video recording',
+                            });
+                          }
                         }, 3000);
                       }
                     }}

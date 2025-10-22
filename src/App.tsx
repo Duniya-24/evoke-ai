@@ -13,6 +13,7 @@ import SpeechAnalysis from "./pages/SpeechAnalysis";
 import VideoAnalysis from "./pages/VideoAnalysis";
 import Chatbot from "./pages/Chatbot";
 import Analytics from "./pages/Analytics";
+import History from "./pages/History";
 import Settings from "./pages/Settings";
 import Profile from "./pages/Profile";
 import UseCases from "./pages/UseCases";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/video-analysis" element={<VideoAnalysis />} />
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/history" element={<History />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/profile" element={<Profile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

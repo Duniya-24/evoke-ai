@@ -41,6 +41,19 @@ const TextAnalysis = () => {
         // Transform the ML model response to match our UI format
         setResults(data.emotions || mockEmotions);
       }
+
+      // Save to history
+      const emotionResults = data?.emotions || mockEmotions;
+      const { data: { user } } = await supabase.auth.getUser();
+      
+      if (user) {
+        await supabase.from('emotion_history').insert({
+          user_id: user.id,
+          analysis_type: 'text',
+          emotions: emotionResults,
+          content_preview: text.substring(0, 100),
+        });
+      }
     } catch (error) {
       console.error('Failed to analyze text:', error);
       // Fallback to mock data
